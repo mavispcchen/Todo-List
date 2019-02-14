@@ -17,12 +17,10 @@ let AddTodo = ({ dispatch, todoList }) => {
       }}>
         <input
           placeholder = "write a todo item"
-          ref={node => {
-            input = node
-          }}
+          ref={node => {input = node}}
         />
         <button
-          disabled = {input === ""}
+          disabled = {() => input.value === ""}
           type = "submit"
         >Add
         </button>
